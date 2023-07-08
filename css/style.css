@@ -1,223 +1,209 @@
-
-*{
-    font-size: 18px;
+:root{
+    --black: #071108;
+    --white: #f5f5f5;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(../font/Poppins-Regular.ttf);
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
+    font-family: Poppins;
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: "logo navbar";
+    background-color: #364652;
+    height: 60px;
+    padding-right: 30px;
+    align-items: center;
 }
 
-.header{
-    background-color: #7371FC ;
-    display: flex;
-    align-items: center;
-    padding: 10px 0px;
-    
+.nav-list{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3,1fr);
 }
 
 .Logo{
-    color: white;
-    flex: 1;
-    flex-shrink: 0;
-    font-size: 28px;
-    font-weight: bold;
-    margin-left: 5rem;
-    /* border: 1px solid black; */
-    padding: 0;
+    padding-left: 30px;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--white);
 }
 
-ul{
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin-right: 5rem;
-    gap: 20px;
-    /* border: 1px solid black; */
-}
-
-a{
+.nav{
     text-decoration: none;
-    color: white;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
 }
 
 .hero-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    padding: 0rem 5rem 0rem 5rem;
-    height: 500px;
-    background-color: #7371FC;
+    display: grid;
+    padding-top: 100px ;
+    padding-bottom: 20px;
+    padding-left: 5% ;
+    padding-right: 5% ;
+    background-color: #364652;
+    grid-template-areas: 
+    "title  hero"
+    "info   hero"
+    "info   hero"
+    "button hero"
+    ;
+    min-height: 300px;
+    gap: 30px;
 }
 
-.information-section{
-    margin: 0;
-    padding: 0rem 5rem 1rem 5rem;
-    height: auto;
-    background-color:#F5EFFF;
-
+.title{
+    grid-area: title;
+    font-size: 36px;
+    font-weight: 700;
+    max-height: 50px;
+    color: var(--white);
+    align-self: end;
 }
 
-.quotes-section{
-    margin: 0;
-    padding: 1rem 5rem 1rem 5rem;
-    height: auto;
-    background-color: #E5D9F2;
+.info{
+    grid-area: info;
+    padding-top: 5px;
+    max-width: 600px;
+    color: var(--white);
 }
 
-.cta-section{
-    margin: 0;
-    padding: 5rem 5rem 5rem 5rem;
-    height: auto;
-    background-color: #F5EFFF;
+.button{
+    align-self: end;
 }
 
-.footer{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    background-color: #7371FC;
-    color: white;
-}
-
-.container{
-    display: flex;
-    /* margin: 0rem 5rem 0rem 5rem; */
-    /* border: 1px solid black; */
-}
-
-.introduction{
-    flex: 1;
-    flex-shrink: 0;
-}
-
-.introduction > .row{
-    display: flex;
-    flex-direction: column;
-    height: 350px;
-    width: 550px;
-}
-
-.row > .title{
-    font-size: 40px;
-    color: white;
-    font-weight: bold;
-    margin-bottom: 20px;
-    flex-grow: 0;
-    text-align: left;
-}
-
-.row > p{
-    margin: 0;
-    flex: 1;
-    text-align: justify;
-}
-
-.row > button{
-    align-self: flex-start;
-    width: 200px;
-    height: 50px;
-    background-color: #CDC1FF;
+button{
+    grid-area: button;
     border: none;
-    border-radius: 2px;
-    font-weight: 700;
-
-
+    padding: 10px 30px;
+    background-color: #B5BEC6;
+    font-family: Poppins;
+    font-weight: 600;
 }
 
-#hero-image{
-    width: auto;
-    height: 350px;
-    border-radius: 5px;
+.image-content{
+    grid-area: hero;
+    max-width: 100%;
+    min-height: 100%;
 }
 
-.information-section > .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.project-section{
+    display: grid;
+    grid-template-areas: 
+    "title  title   title   title"
+    "card1  card2   card3   card4"
+    ;
+    padding-top: 50px ;
+    padding-bottom: 50px ;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-#information-title{
-    padding-top: 2rem;
-    font-size: 28px;
-    font-weight: 700;
-}
-
-.card-list{
-    display: flex;
-    padding-top: 2rem;
+.project-section > .title{
+    grid-area: title;
+    text-align: center;
+    color: var(--black);
+    padding-top: 40px;
+    padding-bottom: 20px ;
+    font-size:28px ;
 }
 
 .card{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-content: center;
     align-items: center;
-    margin: 10px;
+    padding: 20px;
+}
+
+.card1{
+    grid-area: card1;
+}
+.card2{
+    grid-area: card2;
+}
+.card3{
+    grid-area: card3;
+}
+.card4{
+    grid-area: card4;
+}
+
+.card > a{
+    text-decoration: none;
+    color: var(--black);
+    padding-top: 10px;
+    font-weight: 600;
+    
 }
 
 .card > img{
-    width: 250;
-    height: auto;
-    border-radius: 2px;
-    border: 2px solid #E5D9F2;
+    max-width: 100%;
 }
 
-#text{
-    padding-top:20px;
-    color: black;
+.quotes-section{
+    background-color: #C7DBE6;
+    padding-top: 50px ;
+    padding-bottom: 50px ;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-#quote-text{
-    font-size: 28px;
-    font-style: italic;
-    font-weight: lighter;
+
+.quotes-section > .quotes-text{
+    font-family: Poppins;
+    font-size: 2vw;
     text-align: justify;
-}
-
-#author{
-    text-align: right;
     font-style: italic;
-    font-weight: 700;
 }
 
-.cta-section > .container{
-    background-color: #7371FC;
-    padding: 5px 40px;
+.quotes-section > .author{
+    font-family: Poppins;
+    text-align: right;
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cta-section{
+    background-color:#364652 ;
+    margin-top: 50px ;
+    margin-bottom: 50px ;
+    margin-left:100px ;
+    margin-right:100px ;
+    padding: 30px;
     border-radius: 5px;
-    align-items: center;
+    display: grid;
+    grid-template-areas: 
+    "text1  cta"
+    "text2  cta"
+    ;
 }
 
-.container > .text{
-    flex: 1;
+.cta-section > .text1{
+    grid-area: text1;
+    color: var(--white);
+    font-size: 2vw;
+    font-family: Poppins;
+}
+.cta-section > .text2{
+    grid-area: text2;
+    color: var(--white);
+    padding-top: 10px;
+}
+.cta-section > .cta-button{
+    grid-area: cta;
+    justify-self: end;
+    align-self: center;
 }
 
-.text > #head{
-    font-size: 20px;
-    font-weight: 900;
-    color: white;
-}
-
-.text > #body{
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-}
-
-.container > button{
-    padding: 10px 40px;
-    background-color: #cdc1ffbb;
-    border: none;
-    border-radius: 2px;
-    font-weight: 700;
-    transition-duration: 0.4s;
-}
-
-.container > button:hover{
-    background-color: #CDC1FF;
-    color: rgb(102, 102, 102);
-
+.footer{
+    background-color: #364652;
+    text-align: center;
+    padding: 10px;
+    color: var(--white);
 }
