@@ -7,9 +7,13 @@
     src: url(../font/Poppins-Regular.ttf);
 }
 body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
-    font-family: Poppins;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
 }
 .header{
     display: grid;
@@ -17,8 +21,11 @@ body{
     grid-template-areas: "logo navbar";
     background-color: #364652;
     height: 60px;
-    padding-right: 30px;
+    padding-right: 60px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
 }
 
 .nav-list{
@@ -28,7 +35,7 @@ body{
 }
 
 .Logo{
-    padding-left: 30px;
+    padding-left: 66.5px;
     font-size: 32px;
     font-weight: 800;
     color: var(--white);
@@ -44,7 +51,7 @@ body{
 .hero-section{
     display: grid;
     padding-top: 100px ;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     padding-left: 5% ;
     padding-right: 5% ;
     background-color: #364652;
@@ -74,9 +81,10 @@ body{
     color: var(--white);
 }
 
-.button{
+.hero-section > .button{
     align-self: end;
 }
+
 
 button{
     grid-area: button;
@@ -85,21 +93,29 @@ button{
     background-color: #B5BEC6;
     font-family: Poppins;
     font-weight: 600;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #cfd9e2;
+    transform: scale(1.01);
 }
 
 .image-content{
     grid-area: hero;
     max-width: 100%;
     min-height: 100%;
+    opacity: 80%;
 }
 
 .project-section{
     display: grid;
     grid-template-areas: 
     "title  title   title   title"
-    "card1  card2   card3   card4"
+    "dash dash dash dash"
+    "card  card   card   card"
     ;
-    padding-top: 50px ;
+    padding-top: 0px ;
     padding-bottom: 50px ;
     padding-left: 5%;
     padding-right: 5%;
@@ -110,28 +126,21 @@ button{
     text-align: center;
     color: var(--black);
     padding-top: 40px;
-    padding-bottom: 20px ;
+    padding-bottom: 0px ;
     font-size:28px ;
+}
+
+.project-section > .line{
+    grid-area: dash;
+    justify-self: center;
+    padding-bottom: 40px;
 }
 
 .card{
     display: grid;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-}
-
-.card1{
-    grid-area: card1;
-}
-.card2{
-    grid-area: card2;
-}
-.card3{
-    grid-area: card3;
-}
-.card4{
-    grid-area: card4;
+    padding-bottom: 20px;
 }
 
 .card > a{
@@ -143,7 +152,16 @@ button{
 }
 
 .card > img{
-    max-width: 100%;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    border: 2px solid var(--black);
+}
+
+.card > img:hover{
+    transform: scale(1.05);
+    /* transition-delay: 0.1s; */
 }
 
 .quotes-section{
@@ -156,7 +174,7 @@ button{
 
 .quotes-section > .quotes-text{
     font-family: Poppins;
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: justify;
     font-style: italic;
 }
@@ -205,5 +223,26 @@ button{
     background-color: #364652;
     text-align: center;
     padding: 10px;
+    color: var(--white);
+}
+
+.floating-button{    
+    padding: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #364652;
+}
+
+.floating-button:hover{    
+    background-color: #364652;
+    transform: scale(1.2);
+}
+
+.floating-button > a{
     color: var(--white);
 }

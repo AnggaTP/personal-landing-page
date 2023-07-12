@@ -5,58 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Never Ending Landing Page</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/c31c9c7bc7.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <section class="header">
         <div class="Logo">Never Ending</div>
         <div class="nav-list">
             <a class = "nav" href="#">Home</a></li>
-            <a class = "nav" href="#">My Project</a></li>
+            <a class = "nav" href="#anchor">My Project</a></li>
             <a class = "nav" href="#">Contact</a></li>
         </div>
     </section>
 
     <section class="content">
         <div class="hero-section">
-            <div class="title">Personal Landing Page</div>
-            <div class="info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, voluptas excepturi! Consequatur quod architecto voluptatum iste ducimus accusantium nostrum nulla est recusandae rem. Voluptatem, unde fugiat pariatur amet modi quidem?</div>
+            <div class="title">Project Showcase Page</div>
+            <div class="info">This is my personal page related to The Odin Project. On this page, I will showcase the mini projects I have worked on as web development practice. Please feel free to explore some of my projects.</div>
             <div class="button">
-                <button>Personal CV</button>
+                <button class="profil-button">
+                    <a href="https://github.com/AnggaTP">Github Page  <span class="fa fa-brands fa-github fa-lg"></span></a>
+                </button>
             </div>
             <img src="/img/heroimg.jpg" alt="" class="image-content">
+
         </div>
 
         <div class="project-section">
-            <div class="title">My Project</div>
-            <div class="card card1">
-                <img src="/img/example.jpg" alt="">
-                <a href="#" class="desc-text">Example Text</a>
+            <div class="title">Mini Project</div>
+            <div class="line">-----</div>
+            <div class="card">
+                <img src="/img/recipes-project.png" alt="">
+                <a href="https://anggatp.github.io/odin-recipes/" class="desc-text">Recipes Pages</a>
             </div>
-            <div class="card card2">
-                <img src="/img/example.jpg" alt="">
-                <a href="#" class="desc-text">Example Text</a>
+            <div class="card">
+                <img src="/img/rockpapercissor.png" alt="">
+                <a href="https://anggatp.github.io/rock-paper-scissor/" class="desc-text">Rock Paper Scissor</a>
             </div>
-            <div class="card card3">
-                <img src="/img/example.jpg" alt="">
-                <a href="#" class="desc-text">Example Text</a>
+            <div class="card">
+                <img src="/img/etch-a-sketch-project.png" alt="">
+                <a href="https://anggatp.github.io/etch-a-sketch/" class="desc-text">Etch A Sketch</a>
             </div>
-            <div class="card card4">
-                <img src="/img/example.jpg" alt="">
-                <a href="#" class="desc-text">Example Text</a>
-            </div>
-            <div class="card card5">
-                <img src="/img/example.jpg" alt="">
-                <a href="#" class="desc-text">Example Text</a>
-            </div>
-            <div class="card card6">
-                <img src="/img/example.jpg" alt="">
-                <a href="#" class="desc-text">Example Text</a>
+            <div class="card">
+                <img src="/img/calculator-project.png" alt="">
+                <a href="https://anggatp.github.io/the-calculator/" class="desc-text">The Calculator Project</a>
             </div>
         </div>
 
         <div class="quotes-section">
-            <div class="quotes-text">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam sit, et, sapiente quis excepturi, corrupti distinctio asperiores porro veniam cumque voluptatem amet. Laborum ducimus tempora maiores non tempore quisquam quod."</div>
-            <div class="author">Markus B. Fredrick</div>
+            <div class="quotes-text">"True success lies not in achieving a single goal, but in constantly seeking knowledge and growth. Be relentless in your pursuit of learning, for it is the foundation upon which greatness is built. Embrace challenges as opportunities to expand your mind, and approach each day with a hunger for acquiring new skills and insights. Remember, the more you learn, the more you empower yourself to make a lasting impact on the world."</div>
+            <div class="author">-Unknown</div>
         </div>
 
         <div class="cta-section">
@@ -67,74 +65,11 @@
     </section>
 
     <section class="footer">
-        <div>Copyright @ Personal Landing Page</div>
+        <div>Copyright© Never Ending</div>
     </section>
-    <!-- <section class="content">
-        <section class="hero-section">
-            <div class="container">
-                <div class="introduction">
-                    <div class="row">
-                        <p class="title">Hello! Welcome to My Personal Website</p>
-                        <p>Welcome to my personal portfolio page! As a new learner in web development, I'm excited to showcase my journey of growth and exploration in this dynamic field. From diving into HTML and CSS to venturing into JavaScript and responsive design, each project represents a step forward in honing my skills and crafting engaging web experiences. Join me as I embark on this exciting adventure of learning and creating.</p>
-                        <button>Personal CV</button>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="img/heroimg.jpg" alt="" id="hero-image">
-                </div>
-            </div>
-        </section>
 
-        <section class="information-section">
-            <div class="container">
-                <div id="information-title">My Project</div>
-                <div class="card-list">
-                    <div class="card">
-                        <img src="img/example.jpg" alt="">
-                        <a href="#" id="text">Recipe List Page</a>
-                    </div>
-                    <div class="card">
-                        <img src="img/example.jpg" alt="">
-                        <a href="#" id="text">Image Information</a>
-                    </div>
-                    <div class="card">
-                        <img src="img/example.jpg" alt="">
-                        <a href="#" id="text">Image Information</a>
-                    </div>
-                    <div class="card">
-                        <img src="img/example.jpg" alt="">
-                        <a href="#" id="text">Image Information</a>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="quotes-section">
-           <div class="container">
-                <p id="quote-text">
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi animi placeat atque quia itaque? Soluta laboriosam, beatae laudantium quia, veniam nesciunt nihil doloribus velit qui excepturi, tenetur repellendus aspernatur magnam."
-                </div>
-                <p id="author">
-                    - Markus B. Harrrison
-                </div>
-           </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <div class="text">
-                    <p id="head">For more further information ?</p>
-                    <p id="body">Please feel free to contact me by just hit the button</p>
-                </div>
-                <button>Contact Me</button>
-            </div>
-        </section>
-
-    </section> -->
-
-    <!-- <section class="footer">
-        <div>Copyright @ Personal Landing Page</div>
-    </section> -->
+    <button class="floating-button">
+        <a href="#">top</a>
+    </button>
 </body>
 </html>
