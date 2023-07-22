@@ -10,10 +10,14 @@
 </head>
 <body>
     <section class="header">
-        <div class="Logo">Never Ending</div>
+        <div class="Logo">
+            <a href="#">
+                <img href="#" src="img/logo.png" alt="">
+            </a>
+        </div>
         <div class="nav-list">
             <a class = "nav" href="#">Home</a></li>
-            <a class = "nav" href="#anchor">My Project</a></li>
+            <a class = "nav" href="#project">My Project</a></li>
             <a class = "nav" href="#">Contact</a></li>
         </div>
     </section>
@@ -31,24 +35,36 @@
 
         </div>
 
-        <div class="project-section">
+        <div class="project-section" id="project">
             <div class="title">Mini Project</div>
             <div class="line">-----</div>
             <div class="card">
                 <img src="/img/recipes-project.png" alt="">
-                <a href="https://anggatp.github.io/odin-recipes/" class="desc-text">Recipes Pages</a>
+                <div class="text">Recipes Pages</div>
+                <div>
+                    <a href="https://anggatp.github.io/odin-recipes/" style="color: blue;">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
+                </div>
             </div>
             <div class="card">
                 <img src="/img/rockpapercissor.png" alt="">
-                <a href="https://anggatp.github.io/rock-paper-scissor/" class="desc-text">Rock Paper Scissor</a>
+                <div class="text">Rock Paper Scissor</div>
+                <div>
+                    <a href="https://anggatp.github.io/rock-paper-scissor/" style="color: blue;"">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
+                </div>
             </div>
             <div class="card">
                 <img src="/img/etch-a-sketch-project.png" alt="">
-                <a href="https://anggatp.github.io/etch-a-sketch/" class="desc-text">Etch A Sketch</a>
+                <div class="text">Etch A Sketch</div>
+                <div>
+                    <a href="https://anggatp.github.io/etch-a-sketch/" style="color: blue;">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
+                </div>
             </div>
             <div class="card">
                 <img src="/img/calculator-project.png" alt="">
-                <a href="https://anggatp.github.io/the-calculator/" class="desc-text">The Calculator Project</a>
+                <div class="text">Calculator</div>
+                <div>
+                    <a href="https://anggatp.github.io/the-calculator/" style="color: blue;">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
+                </div>
             </div>
         </div>
 
@@ -68,8 +84,10 @@
         <div>Copyright© Never Ending</div>
     </section>
 
-    <button class="floating-button">
-        <a href="#">top</a>
-    </button>
+    <a href="#top">
+        <button class="floating-button">
+            <span class="fas fa-arrow-up"></span>
+        </button>
+    </a>
 </body>
 </html>
