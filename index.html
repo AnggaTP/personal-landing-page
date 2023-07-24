@@ -10,21 +10,21 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <section class="header">
-        <div class="Logo">
+    <header>
+        <div class="logo">
             <a href="#">
                 <img href="#" src="img/logo.png" alt="">
             </a>
         </div>
         <div class="nav-list">
-            <a class = "nav" href="#">Home</a></li>
-            <a class = "nav" href="#anchor">My Project</a></li>
+            <a class = "nav" href="#top">Home</a></li>
+            <a class = "nav" href="#project">My Project</a></li>
             <a class = "nav" href="#">Contact</a></li>
         </div>
-    </section>
+    </header>
 
     <section class="content">
-        <div class="hero-section">
+        <div class="hero-section child" id="hero">
             <div class="title">Project Showcase Page</div>
             <div class="info">This is my personal page related to The Odin Project. On this page, I will showcase the mini projects I have worked on as web development practice. Please feel free to explore some of my projects.</div>
             <a href="https://github.com/AnggaTP" target="_blank">
@@ -32,57 +32,60 @@
                     <button>Github Page  <span class="fa fa-brands fa-github fa-lg"></span></button>
                 </div>
             </a>
-            <img src="img/heroimg.jpg" alt="" class="image-content">
+            <div class="image-content"></div>
         </div>
 
-        <div class="project-section" id="project">
+        <div class="project-section child" id="project">
             <div class="title">Mini Project</div>
             <div class="line">-----</div>
-            <div class="card">
-                <img src="/img/recipes-project.png" alt="">
-                <div class="text">Recipes Pages</div>
-                <div>
-                    <a href="https://anggatp.github.io/odin-recipes/" target="_blank" style="color: blue;">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
+            <div class="card-container">
+                <div class="card">
+                    <img src="/img/recipes-project.png" alt="">
+                    <div class="text">Recipes Pages</div>
+                    <div>
+                        <a href="https://anggatp.github.io/odin-recipes/" target="_blank" style="color: blue;">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/rockpapercissor.png" alt="">
+                    <div class="text">Rock Paper Scissor</div>
+                    <div>
+                        <a href="https://anggatp.github.io/rock-paper-scissor/" target="_blank" style="color: blue;"">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/etch-a-sketch-project.png" alt="">
+                    <div class="text">Etch A Sketch</div>
+                    <div>
+                        <a href="https://anggatp.github.io/etch-a-sketch/" target="_blank" style="color: blue;">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/calculator-project.png" alt="">
+                    <div class="text">Calculator</div>
+                    <div>
+                        <a href="https://anggatp.github.io/the-calculator/" target="_blank" style="color: blue;">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="/img/rockpapercissor.png" alt="">
-                <div class="text">Rock Paper Scissor</div>
-                <div>
-                    <a href="https://anggatp.github.io/rock-paper-scissor/" target="_blank" style="color: blue;"">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/img/etch-a-sketch-project.png" alt="">
-                <div class="text">Etch A Sketch</div>
-                <div>
-                    <a href="https://anggatp.github.io/etch-a-sketch/" target="_blank" style="color: blue;">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/img/calculator-project.png" alt="">
-                <div class="text">Calculator</div>
-                <div>
-                    <a href="https://anggatp.github.io/the-calculator/" target="_blank" style="color: blue;">Live Preview <span class="fas fa-external-link-alt" style="font-size: 12px;"></span></a>
-                </div>
-            </div>
+            
         </div>
 
-        <div class="quotes-section">
+        <div class="quotes-section child" id="quotes">
             <div class="quotes-text">"True success lies not in achieving a single goal, but in constantly seeking knowledge and growth. Be relentless in your pursuit of learning, for it is the foundation upon which greatness is built. Embrace challenges as opportunities to expand your mind, and approach each day with a hunger for acquiring new skills and insights. Remember, the more you learn, the more you empower yourself to make a lasting impact on the world."</div>
             <div class="author">-Unknown</div>
         </div>
 
-        <div class="cta-section">
+        <div class="cta-section child" id="cta">
             <div class="text1">For more information ? </div>
             <div class="text2">Please feel free to contact me</div>
             <button class="cta-button">Contact Me</button>
         </div>
     </section>
 
-    <section class="footer">
+    <!-- <section class="footer">
         <div>Copyright© Never Ending</div>
-    </section>
+    </section> -->
 
     <a href="#top">
         <button class="floating-button">

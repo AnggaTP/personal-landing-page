@@ -5,14 +5,18 @@
     --background:#abd1c6;
     --button:#f9bc60;
     --buttontext:#001e1d;
-
+    font-size: 16px;
 }
 @font-face {
     font-family: Poppins;
     src: url(../font/Poppins-Regular.ttf);
 }
+*{
+    box-sizing: border-box;
+}
 html{
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 body{
     font-family: Poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -24,7 +28,9 @@ a{
     text-decoration: none;
     color: var(--black);
 }
-.header{
+
+/* Header Style */
+header{
     display: grid;
     grid-template-columns: 1fr 300px;
     grid-template-areas: "logo navbar";
@@ -32,20 +38,21 @@ a{
     height: 60px;
     padding-right: 60px;
     align-items: center;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 3;
 }
 
-.nav-list{
+header > .logo{
+    padding-left: 66.5px;
+    width: 300px;
+}
+
+header > .nav-list{
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3,1fr);
-}
-
-.Logo{
-    padding-left: 66.5px;
-    width: 200px;
 }
 
 a > img{
@@ -63,12 +70,18 @@ a > img:hover{
     color: var(--white);
 }
 
+
+/* Content style */
+.child{
+    scroll-snap-align: start;
+}
+
 .hero-section{
+    width: 100%;
+    height: 100vh;
     display: grid;
-    padding-top: 100px ;
-    padding-bottom: 40px;
-    padding-left: 5% ;
-    padding-right: 5% ;
+    padding-top: 10rem;
+    justify-content: center;
     background-color: var(--main);
     grid-template-rows: repeat(3, max-content);
     grid-template-areas: 
@@ -76,21 +89,18 @@ a > img:hover{
     "info   hero"
     "button hero"
     ;
-    min-height: 470px;
     gap: 30px;
-    
 }
 
-.title{
+.hero-section > .title{
     grid-area: title;
     font-size: 36px;
     font-weight: 700;
     max-height: 50px;
-    color: var(--white);
-    align-self: end;
+    color: var(--white);    
 }
 
-.info{
+.hero-section > .info{
     grid-area: info;
     padding-top: 5px;
     max-width: 600px;
@@ -118,33 +128,34 @@ button:hover{
     transform: scale(1.01);
 }
 
-.image-content{
+.hero-section > .image-content{
     grid-area: hero;
-    max-width: 100%;
-    min-height: 80%;
-    opacity: 80%;
+    width: 500px;
+    height: 350px;
+    background-image: url(/img/heroimg.jpg);
+    background-size: 500px;
 }
 
 .project-section{
     display: grid;
+    grid-template-rows: max-content max-content 1fr;
     grid-template-areas: 
     "title  title   title   title"
     "dash dash dash dash"
     "card  card   card   card"
     ;
-    padding-top: 0px ;
-    padding-bottom: 50px ;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-top: 150px ;
+    padding-bottom: 0px ;
+    width: 100%;
+    height: 100vh;
 }
 
 .project-section > .title{
     grid-area: title;
     text-align: center;
     color: var(--black);
-    padding-top: 40px;
-    padding-bottom: 0px ;
-    font-size:28px ;
+    max-height: max-content;
+    font-size:1.6rem ;
 }
 
 .project-section > .line{
@@ -153,11 +164,21 @@ button:hover{
     padding-bottom: 40px;
 }
 
-.card{
+.card-container{
+    grid-area: card;
+    padding-left: 30px;
+    padding-right: 30px;
     display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+}
+
+.card-container > .card{
+    display: grid;
+    grid-template-rows: repeat(3,max-content);
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
+    /* height: 250px; */
 }
 
 .card > a{
@@ -181,7 +202,6 @@ button:hover{
 
 .card > img:hover{
     transform: scale(1.05);
-    /* transition-delay: 0.1s; */
 }
 
 .quotes-section{
